@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Estaciones del año</h1>
+   
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+        var hola = "Hola Mundo";
+        let hello = "Hello world";
+        console.log(hola);
+        console.log(hello);
+        console.log(window);
+        console.log(window.hola);
+        console.log(window.hello);
+        //ambito de bloque
+        var musica = "Rock";
+        console.log("Variable de genero musical antes del bloque", musica);
+        //esto es un bloque - comentario de una linea
+        /* esto es un 
+        comentario de varias
+        lineas */
+        {
+            var musica = "Pop";
+            console.log("Variable musica dentro del bloque", musica);
+        }
+        console.log("variable musica despues del bloque", musica);
+        console.log("********************************************************************");
+        let musica2 = "Rock";
+        console.log("Variable musica antes del bloque", musica2);
+        {
+            let musica2 = "Pop";
+            console.log("Variable musica dentro del bloque", musica2);
+        }
+        console.log("Variable musica despues del bloque", musica2);
+
+        const PI = 3.1416;
+        console.log(PI);
+        
+        const objeto = {
+            nombre: "Jon",
+            edad: 35
+        }
+
+        const colores = ["Blanco", "negroo", "azul"];
+
+        console.log(objeto);
+        console.log(colores);
+
+        objeto.correo = "jorgeveraug@gmail.com";
+        colores.push("violeta");
+
+    //Cadenas de texto aka Strings
+    /* let nombre ="jorge";
+    let apellido = "Vera"
+    let saludo = new String("Hola Mundo");
+    let lorem = "         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum";
+     */
+
+/*     console.log(nombre, apellido, saludo);
+    console.log(
+        nombre.length,
+        apellido.length,
+        saludo.length, 
+        nombre.toUpperCase(),
+        apellido.toLowerCase(),
+        lorem.includes("amet"),
+        lorem.includes("jorge"),
+        lorem,
+        lorem.trim(),//quita espacios vacios al inicio y al final
+        lorem.split(" "),//generar un conjunto de elementos separados de la forma en que le indique en este caso pedi que se haga entre comillas dobles
+        lorem.split(",")
+        ); */
+
+    /*     let nombre = "jorge";
+        let apellido = "vera";
+
+        //concatenacion de texto
+        let saludo = "hola mi nombre es " + nombre + " " + apellido + ".";
+
+        //interpolacion de variables
+        //Template String
+        let saludo2 = `hola mi nombre es ${nombre} ${apellido}`;
+
+
+        
+        console.log(saludo);
+        console.log(saludo2);
+
+        let ul = " <ul> <li>primavera</li> <li>verano</li> <li>otoño</li> <li>invierno</li> </ul>";
+
+        console.log(ul);
+
+        let ul2 = ` <ul>
+        <li>primavera</li>
+        <li>verano</li>
+        <li>otoño</li>
+        <li>invierno</li>
+    </ul>`;
+/*  *//* 
+        console.log(ul2);
+        
+        let ul3 = " <ul>";
+        ul3 += "<li>primavera</li>"; */ 
+
+/*         <li>primavera</li>
+        <li>verano</li>
+        <li>otoño</li>
+        <li>invierno</li>
+    </ul>"; */
+
+/*     console.log(ul3);
+
+    let a = 2;
+    let b = new Number(1);
+    let c = 7.19;
+    let d = "5.6";
+
+    
+    console.log(a,b);
+    console.log(c.toFixed(5));//toFixed para definir cuantos numeros decimales tendra una variable numerica 
+    console.log(parseInt(c));// me devuelve solo la parte entera de un numero
+    console.log(parseFloat(c));// me devuelve solo la parte flotante.
+    console.log(typeof c,typeof d); //typeof devuelve el tipo de variable 
+    console.log(a + b);
+    console.log(c + parseInt(d));
+    console.log(c + parseFloat(d));
+    console.log(c + Number.parseFloat(d)); */
+/*     
+    let verdadero = true;
+    let falso = false;
+    let v = Boolean(true);
+    let f = Boolean(false);
+
+    console.log(verdadero, falso, v, f);
+    console.log(typeof verdadero, typeof falso);
+    console.log(Boolean(0));
+    console.log(Boolean(-2));
+    console.log(Boolean(""));
+    console.log(Boolean(" "));
+
+    //null y undefined van a representar una variable que no tiene valor pero su diferencia es que una variable que no a sido inicializada
+    let indefinida; 
+    console.log(indefinida);
+    let nulo = null;
+    console.log(null);
+
+    //NaN significa not a number
+    let noEsUnNumero = "hola" * 3.7;
+    console.log(noEsUnNumero); */
+
+    //funcion declarada
+/* 
+    function estoEsUnaFuncion(){
+        console.log("Uno");
+        console.log("Dos");
+        console.log("Tres");
+    };
+
+    //Invocacion de funciones
+    estoEsUnaFuncion();
+    estoEsUnaFuncion();
+ */
+     function unaFuncionQueDevuelveValor(){
+        console.log("Uno");
+        console.log("Dos");
+        console.log("Tres");
+        return "La funcion ha retornado una Cadena de texto";
+     }
+
+
+    //let valorDeFuncion = unaFuncionQueDevuelveValor();
+
+    //console.log(valorDeFuncion);
+
+    function saludar(nombre = "desconocido", edad = 0){
+        console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
+    }
+
+    saludar("jorge", 23);
+    saludar();
+
+    //Funciones declaradas vs funciones expresadas
+
+    function funcionDeclarada(){
+        console.log("Esto es una funcion declarada, puede invocarse en cualquier parte de nuestro codigo incluso antes de que la funcion sea declarada");
+    }
+
+    funcionDeclarada();
+
+    //funcion anonima
+    const funcionExpresada = function(){
+        console.log("Esto es una funcion expresada es decir una funcion que se le a asignado como valor a una variable, si invocamos esta funcion antes de su definicion JS nos dira");
+
+    }
+
+    funcionExpresada();// * deveria votar un error
+
+    
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
